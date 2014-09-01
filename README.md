@@ -1,7 +1,7 @@
 Interpreter
 ===========
 
-Interpreter for a simple language, based on the ["Gang of Four" design pattern](http://en.wikipedia.org/wiki/Interpreter_pattern)
+This program demonstrates how to make an interpreter for a programming language. It uses the ["Gang of Four" design pattern](http://en.wikipedia.org/wiki/Interpreter_pattern). It implements a simple, Pascal-like language. It is written in C++ and runs under Visual Studio; it only uses standard C++ so should be easily portable to other environments.
 
 
 *Usage:*
