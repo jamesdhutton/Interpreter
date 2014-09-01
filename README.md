@@ -6,9 +6,10 @@ Interpreter for a simple language, based on the ["Gang of Four" design pattern](
 
 *Usage:*
 `interpreter <action> <filename>`
-Where action is /p to pretty-print or /e to execute
+
+Where action is `/p` to pretty-print or `/e` to execute
 	
-The grammar of the language is Pascal-like. There are examples in the "Samples" directory. Here is a sample program that finds the first 100 prime numbers, which you can run by typing `interpreter /e ..\samples\compute_primes.txt`
+The grammar of the language is Pascal-like. There are examples in the "Samples" directory. Here is a sample program that prints the first 100 prime numbers. You can run it by typing `interpreter /e ..\samples\compute_primes.txt`
 
 ```
 primecount := 1
