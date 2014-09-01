@@ -1,16 +1,16 @@
 Interpreter
 ===========
 
-Interpreter for a simple language, based on the "Gang of Four" design pattern, as described at http://en.wikipedia.org/wiki/Interpreter_pattern
+Interpreter for a simple language, based on the ["Gang of Four" design pattern](http://en.wikipedia.org/wiki/Interpreter_pattern)
 
-Usage: interpreter <action> <filename>
-Where action is
-	/p to pretty-print
-	/e to execute
+
+*Usage:*
+`interpreter <action> <filename>`
+Where action is /p to pretty-print or /e to execute
 	
-The grammar of the language is Pascal-like. There are examples in the "Samples" directory. Here is a sample program that finds the first 100 prime numbers, which you can run by typing interpreter /e ..\samples\compute_primes.txt
+The grammar of the language is Pascal-like. There are examples in the "Samples" directory. Here is a sample program that finds the first 100 prime numbers, which you can run by typing `interpreter /e ..\samples\compute_primes.txt`
 
-
+```
 primecount := 1
 testprime := 1
 
@@ -36,4 +36,4 @@ begin
 	testprime := testprime + 1
 
 end
-
+```
