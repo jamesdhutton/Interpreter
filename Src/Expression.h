@@ -11,9 +11,9 @@
 class Expression  
 {
 public:
-	typedef std::auto_ptr<Expression> ExprPtr;
+	typedef std::shared_ptr<Expression> ExprPtr;
 	typedef std::list<ExprPtr> Exprs;
-	typedef std::auto_ptr<Exprs> ExprsPtr;
+	typedef std::shared_ptr<Exprs> ExprsPtr;
 	static ExprPtr Parse(tokenIt &it) throw(SyntaxError);
 	virtual long Evaluate(Context &context) = 0;
 	virtual void PrettyPrint() = 0;

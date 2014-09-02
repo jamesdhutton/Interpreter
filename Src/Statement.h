@@ -20,7 +20,7 @@ protected:
 	static void OutputTabs(long tabLevel);
 };
 
-typedef std::auto_ptr<Statement> StatementPtr;
+typedef std::shared_ptr<Statement> StatementPtr;
 typedef std::list< StatementPtr > statementList;
 
 class IfStatement : public Statement

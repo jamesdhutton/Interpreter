@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "StringTokenizer.h"
 #include "Program.h"
+#include <string.h>
 
 using namespace std;
 
@@ -66,7 +67,7 @@ tokenList Program::Lexical(string sProgram)
 
 		bool bFound = false;
 		for (const sTokenStr *pTokenStr = Tokens; pTokenStr->str != NULL && !bFound; pTokenStr++)
-			if (bFound = (stricmp(pTokenStr->str, sTok) == 0))
+			if (bFound = (strcmp(pTokenStr->str, sTok) == 0))
 				result.push_back (sToken(pTokenStr->tok, sTok));
 
 		if (!bFound)

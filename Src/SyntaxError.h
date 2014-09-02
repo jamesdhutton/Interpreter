@@ -4,11 +4,14 @@
 class SyntaxError : public std::exception
 {
 public:
-	SyntaxError(const std::string &err)
+	SyntaxError(const std::string &err) throw()
 		: m_Err(err)
 	{}
+    
+    virtual ~SyntaxError() throw()
+    {}
 
-	virtual const char *what()
+	virtual const char *what() const throw()
 	{
 		return m_Err.c_str();
 	}
