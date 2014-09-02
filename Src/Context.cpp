@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "context.h"
+#include "StdAfx.h"
+#include "Context.h"
 
 using namespace std;
 

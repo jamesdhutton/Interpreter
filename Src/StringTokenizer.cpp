@@ -1,5 +1,6 @@
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "StringTokenizer.h"
+#include <string.h>
 
 CStringTokenizer::CStringTokenizer (char const * szTokens, char const * szSeparators)
   : m_lpszTokens (NULL)
