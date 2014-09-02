@@ -46,7 +46,7 @@ void Statement::OutputTabs(long tabLevel)
 
 // IfStatement
 
-IfStatement::IfStatement(tokenIt &it)
+IfStatement::IfStatement(tokenIt &it) throw(SyntaxError)
 {
 	Expect(tIf, *it++);
 	m_expression = Expression::Parse(it);
@@ -72,7 +72,7 @@ void IfStatement::PrettyPrint(long &tabLevel)
 
 // WhileStatement
 
-WhileStatement::WhileStatement(tokenIt &it)
+WhileStatement::WhileStatement(tokenIt &it) throw(SyntaxError)
 {
 	Expect(tWhile, *it++);
 	m_expression = Expression::Parse(it);
@@ -98,7 +98,7 @@ void WhileStatement::PrettyPrint(long &tabLevel)
 
 // PrintStatement
 
-PrintStatement::PrintStatement(tokenIt &it)
+PrintStatement::PrintStatement(tokenIt &it) throw(SyntaxError)
 {
 	Expect(tPrint, *it++);
 	m_expression = Expression::Parse(it);
@@ -119,7 +119,7 @@ void PrintStatement::PrettyPrint(long &tabLevel)
 
 // CompoundStatement
 
-CompoundStatement::CompoundStatement(tokenIt &it)
+CompoundStatement::CompoundStatement(tokenIt &it) throw(SyntaxError)
 {
 	Expect(tBegin, *it++);
 	while (it->tok != tEnd && it->tok != tEOF)
@@ -148,7 +148,7 @@ void CompoundStatement::PrettyPrint(long &tabLevel)
 
 // AssignmentStatement
 
-AssignmentStatement::AssignmentStatement(tokenIt &it)
+AssignmentStatement::AssignmentStatement(tokenIt &it) throw(SyntaxError)
 {
 	Expect(tIdentifier, *it);
 	m_variable = it->s;

@@ -20,21 +20,21 @@ CStringTokenizer::~CStringTokenizer ()
 
 char const * CStringTokenizer::GetNextToken ()
 {
-	while (*m_lpszNextToken != NULL && IsSeparator (*m_lpszNextToken))
+	while (*m_lpszNextToken != '\0' && IsSeparator (*m_lpszNextToken))
 		Increment();
 
-	if (*m_lpszNextToken == NULL)
+	if (*m_lpszNextToken == '\0')
 		return NULL;
 	
 	m_nCurrentPos = m_nNextPos;
 
 	char const * lpszResult = m_lpszNextToken;
 
-	for (Increment(); *m_lpszNextToken != NULL && !IsSeparator (*m_lpszNextToken); Increment());
+	for (Increment(); *m_lpszNextToken != '\0' && !IsSeparator (*m_lpszNextToken); Increment());
 
-	if (*m_lpszNextToken != NULL)
+	if (*m_lpszNextToken != '\0')
 	{
-		*m_lpszNextToken = NULL;
+		*m_lpszNextToken = '\0';
 		Increment();
 	}
 
@@ -44,8 +44,8 @@ char const * CStringTokenizer::GetNextToken ()
 bool CStringTokenizer::IsSeparator (const char &c)
 {
 	bool bResult = false;
-	for (const char *pSep = m_lpszSeparators; *pSep != NULL; pSep++)
-		if (bResult = (*pSep == c))
+	for (const char *pSep = m_lpszSeparators; *pSep != '\0'; pSep++)
+		if ((bResult = (*pSep == c)))
 			break;
 	return bResult;
 }

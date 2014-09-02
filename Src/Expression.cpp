@@ -19,7 +19,7 @@ void Expression::Expect(eTokenID eExpected, const sToken &sActual) throw (Syntax
 	}
 }
 
-Expression::ExprPtr Expression::Parse(tokenIt &it)
+Expression::ExprPtr Expression::Parse(tokenIt &it) throw (SyntaxError)
 {
 	return ExprPtr (OrExp::Parse(it));
 }
