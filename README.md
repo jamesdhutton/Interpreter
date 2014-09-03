@@ -19,7 +19,7 @@ The grammar of the language is Pascal-like. Here is a sample program that prints
 This example is available in the "Samples" directory. You can run it by typing `interpreter /e ../samples/compute_primes.txt` (use backslashes for Windows)
 
 ```
-primecount := 1
+primecount := 0
 testprime := 1
 
 while primecount < 100
@@ -27,11 +27,11 @@ begin
 
 	isprime := 1
 
-	upperbound := testprime / 2
-	while upperbound > 1 and isprime = 1
+	factor := 2
+	while isprime and factor * factor < testprime + 1
 	begin
-		isprime := testprime mod upperbound <> 0
-		upperbound := upperbound - 1
+		isprime := testprime mod factor <> 0
+		factor := factor + 1
 	end
 
 	if isprime = 1
@@ -44,4 +44,5 @@ begin
 	testprime := testprime + 1
 
 end
+
 ```
