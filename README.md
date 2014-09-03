@@ -1,7 +1,7 @@
 Interpreter for Simple Language
 ===============================
 
-This program demonstrates how to make an interpreter for a programming language. It uses the ["Gang of Four" Intepreter design pattern](http://en.wikipedia.org/wiki/Interpreter_pattern) to implement a simple, Pascal-like language. It is written in C++ and compiles Windows, Linux and MacOS.
+This program demonstrates how to make an interpreter for a programming language. It uses the ["Gang of Four" Intepreter design pattern](http://en.wikipedia.org/wiki/Interpreter_pattern) to implement a simple, Pascal-like language. It is written in C++ and compiles under Windows, Linux and MacOS.
 
 ## To build it
 * Linux and MacOS: type `make`
