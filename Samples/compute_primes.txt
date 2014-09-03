@@ -1,4 +1,4 @@
-primecount := 1
+primecount := 0
 testprime := 1
 
 while primecount < 100
@@ -6,11 +6,11 @@ begin
 
 	isprime := 1
 
-	upperbound := testprime / 2
-	while upperbound > 1 and isprime = 1
+	factor := 2
+	while isprime and factor * factor < testprime + 1
 	begin
-		isprime := testprime mod upperbound <> 0
-		upperbound := upperbound - 1
+		isprime := testprime mod factor <> 0
+		factor := factor + 1
 	end
 
 	if isprime = 1
