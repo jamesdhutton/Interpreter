@@ -17,6 +17,7 @@ public:
 	static ExprPtr Parse(tokenIt &it) throw(SyntaxError);
 	virtual long Evaluate(Context &context) = 0;
 	virtual void PrettyPrint() = 0;
+	virtual ~Expression() {};
 protected:
 	static void Expect(eTokenID eExpected, const sToken &sActual) throw (SyntaxError);
 };

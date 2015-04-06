@@ -15,6 +15,7 @@ public:
 	virtual void Execute(Context &context) = 0;
 	virtual void PrettyPrint(long &tabLevel) = 0;
 	static Statement *Create(tokenIt &it);
+	virtual ~Statement() {};
 protected:
 	static void Expect(eTokenID eExpected, const sToken &sActual) throw (SyntaxError);
 	static void OutputTabs(long tabLevel);
