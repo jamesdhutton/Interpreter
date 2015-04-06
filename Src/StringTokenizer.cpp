@@ -5,8 +5,8 @@
 CStringTokenizer::CStringTokenizer (char const * szTokens, char const * szSeparators)
   : m_lpszTokens (NULL)
   , m_lpszSeparators (NULL)
-  , m_nNextPos(0)
   , m_nCurrentPos(0)
+  , m_nNextPos(0)
 {
 	m_lpszTokens = AllocStr (szTokens);
 	m_lpszSeparators = AllocStr (szSeparators);
