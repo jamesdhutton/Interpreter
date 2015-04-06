@@ -13,7 +13,6 @@ private:
 	bool IsSeparator (const char &c);
 	void Increment();
 	
-	char * m_lpszOriginal;
 	char * m_lpszTokens;
 	char * m_lpszNextToken;
 	char * m_lpszSeparators;
