@@ -15,6 +15,11 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+interpreter
+
+# Eclipse/CDT Project files
+.project
+.cproject
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -185,7 +190,8 @@ FakesAssemblies/
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*

@@ -154,6 +154,8 @@ void ComparisonExp::PrettyPrint()
 	case tNe:
 		cout << " <> ";
 		break;
+	default:
+		cerr << "Error: invalid token!";
 	}
 	m_rhs->PrettyPrint();
 }
